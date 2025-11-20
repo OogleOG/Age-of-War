@@ -91,6 +91,10 @@ Open:
 index.html
 ```
 
+<img width="1842" height="922" alt="image" src="https://github.com/user-attachments/assets/5d2704d2-a9ba-4387-96bd-3da2e5f9465d" />
+
+<img width="1834" height="916" alt="image" src="https://github.com/user-attachments/assets/7fe6544d-3fed-472d-974b-d6bc94078ae6" />
+
 ## 🤝 Contributing
 
 PRs and issues are welcome!
