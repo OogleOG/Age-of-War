@@ -4,6 +4,9 @@ A full modern remake of the classic **Age of War** built entirely in **HTML5 Can
 
 This project is open-source and playable directly in the browser.
 
+<img width="1803" height="900" alt="image" src="https://github.com/user-attachments/assets/6ee38c7c-c1fa-42f0-a07b-9c3ad2e60aff" />
+
+
 ## 📝 About the Project
 
 This is a fan-made recreation of the legendary Flash game **Age of War**, rebuilt from the ground up using modern web technologies.  
