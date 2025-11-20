@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age of War - Remake</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- MAIN MENU -->
+    <div id="main-menu">
+        <div class="menu-background">
+            <div class="menu-particles"></div>
+        </div>
+        <div class="menu-content">
+            <div class="menu-header">
+                <h1 class="main-title">AGE OF WAR</h1>
+                <p class="main-subtitle">Conquer Through the Ages</p>
+                <div class="title-divider large"></div>
+            </div>
+
+            <div class="menu-body">
+                <h2 class="menu-section-title">Select Difficulty</h2>
+                <div class="difficulty-grid">
+                    <button class="difficulty-btn beginner" data-difficulty="beginner">
+                        <div class="difficulty-icon">🛡️</div>
+                        <div class="difficulty-name">Beginner</div>
+                        <div class="difficulty-description">Perfect for learning<br>Slower AI, more gold</div>
+                        <div class="difficulty-stats">
+                            <span>⚔️ AI Speed: Slow</span>
+                            <span>💰 Gold: +50%</span>
+                        </div>
+                    </button>
+
+                    <button class="difficulty-btn medium" data-difficulty="medium">
+                        <div class="difficulty-icon">⚔️</div>
+                        <div class="difficulty-name">Medium</div>
+                        <div class="difficulty-description">Balanced challenge<br>Standard gameplay</div>
+                        <div class="difficulty-stats">
+                            <span>⚔️ AI Speed: Normal</span>
+                            <span>💰 Gold: Standard</span>
+                        </div>
+                    </button>
+
+                    <button class="difficulty-btn hard" data-difficulty="hard">
+                        <div class="difficulty-icon">🔥</div>
+                        <div class="difficulty-name">Hard</div>
+                        <div class="difficulty-description">Intense warfare<br>Fast AI, less gold</div>
+                        <div class="difficulty-stats">
+                            <span>⚔️ AI Speed: Fast</span>
+                            <span>💰 Gold: -25%</span>
+                        </div>
+                    </button>
+
+                    <button class="difficulty-btn impossible" data-difficulty="impossible">
+                        <div class="difficulty-icon">💀</div>
+                        <div class="difficulty-name">Impossible</div>
+                        <div class="difficulty-description">For masters only<br>Ruthless AI</div>
+                        <div class="difficulty-stats">
+                            <span>⚔️ AI Speed: Very Fast</span>
+                            <span>💰 Gold: -50%</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="menu-footer">
+                    <p class="menu-hint">💡 Tip: Start with Beginner to learn the mechanics!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GAME CONTAINER -->
+    <div id="game-container" class="hidden">
+        <div id="ui-overlay">
+            <div id="top-bar">
+                <div id="player-info-section" class="info-panel">
+                    <div class="panel-header">
+                        <span class="player-label">YOUR CIVILIZATION</span>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-item age-display">
+                            <div class="stat-icon">🏛️</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Age</span>
+                                <span id="player-age" class="stat-value">Stone Age</span>
+                            </div>
+                        </div>
+                        <div class="stat-item gold-display">
+                            <div class="stat-icon">💰</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Gold</span>
+                                <span id="player-gold" class="stat-value">100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="health-section">
+                        <span class="health-label">Base Health</span>
+                        <div class="health-bar-container">
+                            <div class="health-bar">
+                                <div id="player-health-fill" class="health-fill player"></div>
+                                <span id="player-health-text" class="health-text">1000/1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="game-title">
+                    <h1>AGE OF WAR</h1>
+                    <div class="title-divider"></div>
+                    <div id="difficulty-display"></div>
+                </div>
+
+                <div id="enemy-info-section" class="info-panel enemy">
+                    <div class="panel-header">
+                        <span class="player-label">ENEMY CIVILIZATION</span>
+                    </div>
+                    <div class="stats-row">
+                        <div class="stat-item age-display">
+                            <div class="stat-icon">🏛️</div>
+                            <div class="stat-content">
+                                <span class="stat-label">Age</span>
+                                <span id="enemy-age" class="stat-value">Stone Age</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="health-section">
+                        <span class="health-label">Base Health</span>
+                        <div class="health-bar-container">
+                            <div class="health-bar">
+                                <div id="enemy-health-fill" class="health-fill enemy"></div>
+                                <span id="enemy-health-text" class="health-text">1000/1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="bottom-bar">
+                <div id="evolution-section" class="control-section">
+                    <div class="section-header">
+                        <h3>⚡ Evolution</h3>
+                    </div>
+                    <button id="evolve-btn" class="game-btn evolve-btn large-btn">
+                        <span class="btn-icon">🔺</span>
+                        <span class="btn-name">Evolve Age</span>
+                        <span class="btn-cost">Cost: 500</span>
+                        <span class="btn-description">Unlock new units & upgrades</span>
+                    </button>
+                    <button id="special-ability-btn" class="game-btn special-btn large-btn">
+                        <span class="btn-icon">💥</span>
+                        <span class="btn-name">Meteor Strike</span>
+                        <span class="btn-cost">Cost: 50</span>
+                        <span class="btn-cooldown"></span>
+                    </button>
+                </div>
+
+                <div id="units-section" class="control-section">
+                    <div class="section-header">
+                        <h3>⚔️ Deploy Units</h3>
+                        <span class="section-hint">Train warriors to attack the enemy</span>
+                    </div>
+                    <div id="unit-buttons" class="button-grid"></div>
+                </div>
+
+                <div id="turrets-section" class="control-section">
+                    <div class="section-header">
+                        <h3>🏹 Build Turrets</h3>
+                        <span class="section-hint">Max 3 defensive structures</span>
+                    </div>
+                    <div id="turret-buttons" class="button-grid"></div>
+                </div>
+            </div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+    </div>
+
+    <div id="game-over-screen" class="hidden">
+        <div class="game-over-backdrop"></div>
+        <div class="game-over-content">
+            <div class="game-over-icon">👑</div>
+            <h1 id="game-over-title">Victory!</h1>
+            <p id="game-over-message">You have conquered the ages and defeated your enemy!</p>
+            <div class="game-over-buttons">
+                <button id="restart-btn" class="game-btn large-btn">
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-name">Play Again</span>
+                </button>
+                <button id="menu-btn" class="game-btn large-btn">
+                    <span class="btn-icon">🏠</span>
+                    <span class="btn-name">Main Menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
