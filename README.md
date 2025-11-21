@@ -7,7 +7,7 @@ This project is open-source and playable directly in the browser.
 <img width="1803" height="900" alt="image" src="https://github.com/user-attachments/assets/6ee38c7c-c1fa-42f0-a07b-9c3ad2e60aff" />
 
 
-## 📝 About the Project
+## About the Project
 
 This is a fan-made recreation of the legendary Flash game **Age of War**, rebuilt from the ground up using modern web technologies.  
 It retains the core progression-based gameplay while adding:
@@ -24,9 +24,9 @@ It retains the core progression-based gameplay while adding:
 
 Everything is programmed without external frameworks—just pure JavaScript.
 
-## 🎮 Features
+## Features
 
-### 🧠 Modern AI System
+### Modern AI System
 Enemy behavior changes based on difficulty:
 - Action timing randomization
 - Evolution decision-making
@@ -43,18 +43,18 @@ Each age includes unique units, turrets, and a special ability:
 4. Modern Age  
 5. Future Age  
 
-### 💥 Special Abilities
+### Special Abilities
 Each age includes a powerful special attack.
 
-### 🏗️ Player Turrets
+### Player Turrets
 Up to 3 defensive turrets, each with build cost, upgrade cost, and level scaling.
 
-### 💰 Economy System
+### Economy System
 - Gold per second  
 - Gold for kills  
 - Difficulty-based multipliers  
 
-## 🧩 How to Play
+## How to Play
 
 1. Open the game in your browser  
 2. Choose a difficulty  
@@ -63,23 +63,14 @@ Up to 3 defensive turrets, each with build cost, upgrade cost, and level scaling
 5. Evolve your civilization  
 6. Destroy the enemy base  
 
-## 📁 Project Structure
-
-```
-📦 Age-of-War-Remake
-├── index.html
-├── styles.css
-└── game.js
-```
-
-## 🛠️ Technologies Used
+## Technologies Used
 
 - HTML5 Canvas  
 - Vanilla JavaScript  
 - CSS3  
 - Google Fonts  
 
-## 🔧 Installation
+## Installation
 
 Clone:
 ```sh
@@ -95,14 +86,14 @@ index.html
 
 <img width="1834" height="916" alt="image" src="https://github.com/user-attachments/assets/7fe6544d-3fed-472d-974b-d6bc94078ae6" />
 
-## 🤝 Contributing
+## Contributing
 
 PRs and issues are welcome!
 
-## 🏛️ Disclaimer
+## Disclaimer
 
 Fan-made project, not affiliated with the original creators.
 
-## ⭐ Support
+## Support
 
 If you enjoyed this project, consider starring the repo!
